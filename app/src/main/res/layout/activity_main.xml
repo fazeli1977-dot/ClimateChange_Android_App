@@ -3,14 +3,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/textHello"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello"
-        android:textSize="20sp" />
+        android:text="@string/overview_title"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_sources_title"
+                android:textStyle="bold"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/dataSourcesDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sources used for maps and datasets are cited. Tap to view source." />
+
+            <Button
+                android:id="@+id/btnViewSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View sample source"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btnFetchNow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fetch data now"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btnOpenChart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open chart"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/btnOpenMap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open map"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/open_source_notice"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>
